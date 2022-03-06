@@ -38,5 +38,34 @@ public class No_of_frequency {
 
         }
 
+        /*
+         * HashMap<Character, Integer> hm= new HashMap<Character, Integer>();
+         * StringBuilder k = new StringBuilder("");
+         * for(int i=0;i<s.length();i++)
+         * {
+         * if(hm.containsKey(s.charAt(i)))
+         * {
+         * hm.put(s.charAt(i),hm.get(s.charAt(i))+1);
+         * }
+         * else{
+         * hm.put(s.charAt(i),1);
+         * }
+         * }
+         * List<Map.Entry<Character, Integer> > list
+         * = new LinkedList<Map.Entry<Character, Integer> >(
+         * hm.entrySet());
+         * Collections.sort(list,(i1,i2)->i1.getValue().compareTo(i2.getValue()));
+         * for (Map.Entry<Character, Integer> aa : list) {
+         * int a=aa.getValue();
+         * char c=aa.getKey();
+         * for(int i=0;i<a;i++)
+         * {
+         * k.append(c);
+         * }
+         * }
+         * 
+         * return k.reverse().toString();
+         */
+
     }
 }
