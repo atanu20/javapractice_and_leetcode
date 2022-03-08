@@ -138,4 +138,53 @@ public class SingleLinkedList {
         }
 
     }
+
+    public void deleteFirst() {
+        if (head == null)
+            return;
+        head = head.next;
+    }
+
+    public void deleteLast() {
+        if (head == null)
+            return;
+
+        Node temp = head;
+        Node n1 = null;
+        while (temp.next != null) {
+            n1 = temp;
+            temp = temp.next;
+        }
+        n1.next = null;
+
+    }
+
+    public int search(int val) {
+        Node temp = head;
+        while (temp.next != null) {
+            if (temp.data == val) {
+                return 1;
+            }
+            temp = temp.next;
+        }
+        if (temp.data == val) {
+            return 1;
+        }
+        return 0;
+    }
+
+    public void reverse() {
+        Node prev = null;
+        Node next = null;
+        Node temp = head;
+        while (temp != null) {
+            next = temp.next;
+            temp.next = prev;
+            prev = temp;
+            temp = next;
+        }
+        head = prev;
+
+    }
+
 }

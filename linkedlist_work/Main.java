@@ -13,7 +13,12 @@ public class Main {
         sl.insertAt(9, 500);
         sl.insertAt(21, 20);
 
-        sl.delete(6);
+        // sl.delete(6);
+        // sl.deleteFirst();
+        // sl.deleteLast();
+        // System.out.println(sl.search(501) == 1 ? "Find" : "Not Found");
+        sl.show();
+        sl.reverse();
         sl.show();
         System.out.println(sl.size());
     }
