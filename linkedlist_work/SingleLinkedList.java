@@ -103,16 +103,39 @@ public class SingleLinkedList {
 
     }
 
-    public int delete(int val) {
-        Node temp = head;
-        while (temp.next != null) {
+    public void delete(int pos) {
 
-            if (temp.data == val) {
+        if (head == null)
+            return;
+
+        if (pos == 0) {
+
+            head = head.next;
+
+        } else if (pos == size()) {
+            Node temp = head;
+            Node n1 = null;
+
+            while (temp.next != null) {
+                n1 = temp;
+                temp = temp.next;
 
             }
+            n1.next = null;
 
-            temp = temp.next;
+        } else {
+
+            Node temp = head;
+            Node n1 = null;
+            for (int i = 0; i < pos - 1; i++) {
+                temp = temp.next;
+            }
+            n1 = temp.next;
+            temp.next = n1.next;
+
+            n1 = null;
+
         }
-        return 1;
+
     }
 }
