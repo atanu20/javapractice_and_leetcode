@@ -187,4 +187,76 @@ public class SingleLinkedList {
 
     }
 
+    public int midEle() {
+        Node fast = head;
+        Node slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+
+        }
+        return slow.data;
+
+    }
+
+    public int nth_node_from_end(int val) {
+        int d = size() - val;
+        Node n = head;
+        // System.out.println(d);
+        for (int i = 0; i < d; i++) {
+            n = n.next;
+        }
+        return n.data;
+    }
+
+    public void removeduplicate() {
+        Node n = head;
+        while (n != null && n.next != null) {
+            if (n.data == n.next.data) {
+                n.next = n.next.next;
+            } else {
+                n = n.next;
+            }
+        }
+
+    }
+
+    // public void loop() {
+    // Node n = head;
+    // int p = 0;
+    // while (n.next != null) {
+    // if (p == 2) {
+    // break;
+    // }
+    // n = n.next;
+    // p++;
+    // }
+    // System.out.println(n.data);
+    // Node no = head;
+    // while (no.next != null) {
+    // no = no.next;
+    // }
+    // no.next = n;
+    // }
+    public void addElementInSortedOrder(int val) {
+        Node nw = new Node();
+        nw.next = null;
+        nw.data = val;
+
+        Node n = head;
+        Node temp = null;
+        int p = 0;
+        while (n.next != null && n.data <= nw.data) {
+            temp = n;
+            n = n.next;
+            p++;
+        }
+        if (p > 0) {
+            nw.next = n;
+            temp.next = nw;
+        } else {
+            insertStart(val);
+        }
+
+    }
 }
