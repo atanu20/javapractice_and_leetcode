@@ -217,7 +217,7 @@ public class DoublyList {
 
         // dl.deletefirst();
         // dl.deleteLast();
-        dl.sortList();
+        // dl.sortList();
         System.out.println(dl.length());
         dl.displayFord();
         // dl.displayBack();
