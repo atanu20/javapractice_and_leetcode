@@ -122,7 +122,7 @@ public class CircularLinkedList {
         csl.insertLast(30);
         csl.insertFirst(5);
         csl.insertLast(88);
-        csl.removeFirst();
+        // csl.removeFirst();
         csl.removeLast();
         System.out.println(csl.length());
         csl.show();
